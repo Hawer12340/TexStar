@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Texstar - Loja de PCs, computadores e componentes de informática. Compre seu PC ideal.">
+    <title>Texstar - Loja de PCs</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .hero {
+            background: url('https://via.placeholder.com/1600x800?text=Tech+Products') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background-color: #f39c12;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #e67e22;
+        }
+
+        .produtos {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .produtos-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .produto-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .produto-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .produto-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .produto-card h3 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .produto-card a {
+            text-decoration: none;
+            color: #f39c12;
+            font-weight: bold;
+        }
+
+        .sobre, .contato {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        .contato form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contato form label {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .contato form input, .contato form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .contato form button {
+            padding: 10px 20px;
+            background-color: #f39c12;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            .produtos-container {
+                flex-direction: column;
+            }
+
+            .produto-card {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 30px;
+            }
+
+            .cta-button {
+                font-size: 16px;
+            }
+
+            .produto-card h3 {
+                font-size: 20px;
+            }
+
+            footer {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegação -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Encontre o PC dos seus sonhos!</h1>
+            <p>Desktops, laptops e componentes para todas as necessidades.</p>
+            <a href="#produtos" class="cta-button">Veja nossos Produtos</a>
+        </div>
+    </section>
+
+    <!-- Seção de Produtos -->
+    <section id="produtos" class="produtos">
+        <h2>Produtos em Destaque</h2>
+        <div class="produtos-container">
+            <div class="produto-card">
+                <img src="https://cdn.dooca.store/559/products/2-250_640x640+fill_ffffff.png?v=1722885726" alt="PC Gamer">
+                <h3>PC Gamer</h3>
+                <p>Perfeito para jogos intensos e alta performance.</p>
+                <a href="#">Saiba mais</a>
+            </div>
+            <div class="produto-card">
+                <img src="https://images0.kabum.com.br/produtos/fotos/sync_mirakl/166440/Computador-Completo-I5-8Gb-Ssd-120Gb-Monitor-19-Polegadas_1718813983_g.jpg" alt="PC para Trabalho">
+                <h3>PC para Trabalho</h3>
+                <p>Desempenho confiável para suas tarefas diárias.</p>
+                <a href="#">Saiba mais</a>
+            </div>
+            <div class="produto-card">
+                <img src="https://cdn.dooca.store/180/products/gabinete-gamer-nzxt-h9-flow-mid-tower-vidro-temperado-white-atx-sem-fonte-com-4-fans-cm-h91fw-01-1_640x640+fill_ffffff.jpg?v=1681319138" alt="PC de Alto Desempenho">
+                <h3>PC de Alto Desempenho</h3>
+                <p>Máxima performance para renderização e multitarefa.</p>
+                <a href="#">Saiba mais</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Somos especialistas em montar e vender PCs personalizados, seja para gamers, profissionais ou uso pessoal. Garantimos qualidade, performance e preço justo.</p>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="contato">
+        <h2>Entre em Contato</h2>
+        <form id="form-contato">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Texstar. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Efeito de scroll suave para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Validação simples do formulário
+        document.getElementById('form-contato').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const mensagem = document.getElementById('mensagem').value;
+
+            if (nome && email && mensagem) {
+                alert('Mensagem enviada com sucesso!');
+            } else {
+                alert('Por favor, preencha todos os campos.');
+            }
+        });
+    </script>
+
+</body>
+</html>
